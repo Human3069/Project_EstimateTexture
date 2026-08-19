@@ -1,12 +1,11 @@
 {
-  "name": "texturesenderfortest",
+  "name": "frontends",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "sync-unity": "node scripts/sync-unity.mjs",
     "dev": "vite",
-    "build": "npm run sync-unity && tsc && vite build",
+    "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
