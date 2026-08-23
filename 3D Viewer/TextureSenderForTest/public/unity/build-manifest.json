@@ -1,0 +1,6 @@
+{
+  "loader": "Builds.loader.js",
+  "data": "Builds.data.br",
+  "framework": "Builds.framework.js.br",
+  "code": "Builds.wasm.br"
+}

@@ -21,7 +21,6 @@ ENV/
 !.env.example
 
 # Packaging
-build/
 dist/
 downloads/
 eggs/
