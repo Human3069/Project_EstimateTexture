@@ -299,6 +299,7 @@ function updateGeneratedTextureView(
   preview.src = url ?? ''
   preview.hidden = !hasTexture
   empty.hidden = hasTexture
+  empty.textContent = '생성된 이미지가 없습니다.'
   status.textContent = hasTexture ? '생성됨' : '대기 중'
   status.classList.toggle('ready', hasTexture)
 }
@@ -306,6 +307,8 @@ function updateGeneratedTextureView(
 function setGeneratedStatus(message: string): void {
   heightStatus.textContent = message
   normalStatus.textContent = message
+  heightEmpty.textContent = message === '생성 중' ? '텍스처 로딩 중...' : message
+  normalEmpty.textContent = message === '생성 중' ? '텍스처 로딩 중...' : message
   heightStatus.classList.remove('ready')
   normalStatus.classList.remove('ready')
 }
@@ -369,7 +372,7 @@ function createReadOnlyPanel(number: string, title: string, key: string): string
       <div><span class="panel-number">${number}</span><h2>${title}</h2></div>
       <span id="${key}-status" class="texture-status">대기 중</span>
     </div>
-    <div class="preview-box">
+    <div class="preview-box" aria-live="polite">
       <img id="${key}-preview" alt="${title} 미리보기" hidden />
       <span id="${key}-empty" class="empty-state">생성된 이미지가 없습니다.</span>
     </div>
