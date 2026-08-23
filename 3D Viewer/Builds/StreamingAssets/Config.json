@@ -1,8 +1,12 @@
 {
   "Distance": 2.5,
+  "FOV_Min": 15,
+  "FOV_Max": 60,
+  "FOV_ScrollAmount": 6,
 
-  "Sensitivity": 10,
-  "Smoothness": 10,
+  "Rotate_Sensitivity": 10,
+  "Rotate_Smoothness": 10,
+  "FOV_Smoothness": 10,
 
   "IsShowLog": false
 }
