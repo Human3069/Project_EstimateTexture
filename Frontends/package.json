@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "sync-unity": "node scripts/sync-unity.mjs",
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "npm run sync-unity && tsc && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
